@@ -4,9 +4,13 @@ import { ValidationPipe } from '@nestjs/common';
 async function bootstrap() {
     const app = await NestFactory.create(AppModule);
     app.enableCors({
-        origin: 'http://localhost:5173',
-        credentials: true,
-    });
+    origin: [
+      "http://localhost:5173",
+      "https://webgamenro-backend.onrender.com"
+    ],
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true,
+  });
     app.useGlobalPipes(
         new ValidationPipe({
             whitelist: true, // loại bỏ field dư
