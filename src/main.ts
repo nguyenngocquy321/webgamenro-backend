@@ -4,7 +4,7 @@ import { ValidationPipe } from '@nestjs/common';
 async function bootstrap() {
     const app = await NestFactory.create(AppModule);
     app.enableCors({
-        origin: 'https://webgamenro-backend.onrender.com',
+        origin: 'http://localhost:5173',
         credentials: true,
     });
     app.useGlobalPipes(
