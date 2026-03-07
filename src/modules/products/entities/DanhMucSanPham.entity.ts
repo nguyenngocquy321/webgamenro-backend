@@ -11,7 +11,8 @@ export default class DanhMucSanPham {
 
     @Column()
     AnhBia: string;
-
+    @Column({ default: 1 })
+    TrangThai: number;
     @Column('text')
     MoTa: string;
     @Column({ type: 'int', default: 0 })

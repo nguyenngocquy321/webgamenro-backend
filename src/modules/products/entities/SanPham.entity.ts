@@ -28,7 +28,8 @@ export default class SanPham {
 
     @Column()
     Loai: string;
-
+    @Column({ default: 1 })
+    TrangThai: number;
     @Column({
         type: 'decimal',
         precision: 10,
